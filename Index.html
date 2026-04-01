@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Scholarship Award Portal 2026</title>
+    <style>
+        :root {
+            --primary: #003366; /* Formal Navy */
+            --accent: #ff4757;
+            --bg: #eef2f7;
+        }
+
+        body {
+            font-family: 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+            background-color: var(--bg);
+            margin: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+        }
+
+        .container {
+            background: white;
+            width: 90%;
+            max-width: 500px;
+            border-radius: 15px;
+            overflow: hidden;
+            box-shadow: 0 20px 40px rgba(0,0,0,0.15);
+            text-align: center;
+            border-top: 8px solid var(--primary);
+            transition: all 0.4s ease;
+        }
+
+        /* Initial Professional Look */
+        .header {
+            padding: 30px;
+            background: #fff;
+        }
+
+        .logo {
+            width: 80px;
+            margin-bottom: 15px;
+        }
+
+        h1 {
+            color: #2d3436;
+            font-size: 22px;
+            margin: 0;
+        }
+
+        .status-badge {
+            background: #e1f5fe;
+            color: #0288d1;
+            padding: 5px 15px;
+            border-radius: 20px;
+            font-size: 14px;
+            font-weight: bold;
+            display: inline-block;
+            margin: 15px 0;
+        }
+
+        .content {
+            padding: 0 30px 30px;
+        }
+
+        .btn-check {
+            background: var(--primary);
+            color: white;
+            border: none;
+            padding: 15px 35px;
+            border-radius: 8px;
+            font-size: 16px;
+            font-weight: 600;
+            cursor: pointer;
+            width: 100%;
+            transition: background 0.3s;
+        }
+
+        .btn-check:hover {
+            background: #001f3f;
+        }
+
+        /* Prank Section - Hidden initially */
+        #prankSection {
+            display: none;
+            padding: 20px;
+            background: #fff;
+            animation: shake 0.5s ease-in-out;
+        }
+
+        .gif-container img {
+            width: 100%;
+            border-radius: 10px;
+            margin: 15px 0;
+        }
+
+        .prank-text {
+            font-size: 28px;
+            font-weight: 900;
+            color: var(--accent);
+            text-transform: uppercase;
+            letter-spacing: 2px;
+        }
+
+        .emoji-blast {
+            font-size: 40px;
+            margin: 10px 0;
+        }
+
+        .wish-text {
+            color: #636e72;
+            font-size: 16px;
+            line-height: 1.5;
+            padding: 10px;
+        }
+
+        @keyframes shake {
+            0% { transform: translate(1px, 1px) rotate(0deg); }
+            20% { transform: translate(-3px, 0px) rotate(1deg); }
+            40% { transform: translate(3px, 2px) rotate(-1deg); }
+            60% { transform: translate(-3px, 1px) rotate(0deg); }
+            80% { transform: translate(3px, -1px) rotate(1deg); }
+            100% { transform: translate(1px, 1px) rotate(0deg); }
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container" id="mainCard">
+        <div id="initialView">
+            <div class="header">
+                <img src="https://cdn-icons-png.flaticon.com/512/3135/3135810.png" class="logo" alt="logo">
+                <h1>Academic Board Selection</h1>
+                <div class="status-badge">1 NEW MESSAGE</div>
+            </div>
+            <div class="content">
+                <p>Hello! Your financial aid and scholarship decision for the upcoming semester is now ready for review.</p>
+                <button class="btn-check" onclick="startPrank()">Click to Open Award Letter</button>
+            </div>
+        </div>
+
+        <div id="prankSection">
+            <div class="emoji-blast">🤡 😂 🎊</div>
+            <div class="prank-text">April Fool!</div>
+            
+            <div class="gif-container">
+                <img src="https://media.giphy.com/media/v1.Y2lkPTc5MGI3NjExM3h0ZHRqM2ZkM2ZkM2ZkM2ZkM2ZkM2ZkM2ZkM2ZkM2ZkM2ZkJmVwPXYxX2ludGVybmFsX2dpZl9ieV9pZCZjdD1n/6ra8wCc3Xcm89U789v/giphy.gif" alt="Funny GIF">
+            </div>
+
+            <div class="wish-text">
+                <p><b>Oops! No scholarship here... yet!</b></p>
+                <p>I didn't actually get one, but I'm working hard and I really hope I get one in the future! 🎓✨</p>
+                <p>Sorry for the prank, love you guys! <br> <b>Happy April Fool's Day!</b></p>
+            </div>
+            
+            <div class="emoji-blast">🏃‍♂️💨 💀 🎈</div>
+            <button class="btn-check" style="background: #fab1a0; color: #d63031;" onclick="location.reload()">Forgive Me (Reset)</button>
+        </div>
+    </div>
+
+    <script>
+        function startPrank() {
+            // Switch views
+            document.getElementById('initialView').style.display = 'none';
+            document.getElementById('prankSection').style.display = 'block';
+            
+            // Change border color to something more "chaotic"
+            document.getElementById('mainCard').style.borderTop = '8px solid #ff4757';
+            
+            // Play a sound if you want to be extra (optional)
+            // let audio = new Audio('https://www.myinstants.com/media/sounds/tada.mp3');
+            // audio.play();
+        }
+    </script>
+</body>
+  </html>
+  
